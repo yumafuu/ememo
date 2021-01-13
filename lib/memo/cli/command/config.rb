@@ -1,17 +1,14 @@
 module Memo
   class Cli
     module Command
-      class Today
-        require "date"
-
+      class Config
         def initialize(*)
           @config = Memo::Config.new
-          @today = Memo::Today.new
         end
 
         def call
-          system "mkdir -p #{@today.dir}"
-          system "#{@config.editor} #{@today.fullpath}"
+          tomlfile = ENV["MEMO_CONFIG"] || "~/.memo/config.toml"
+          system "#{@config.editor} #{tomlfile}"
         end
       end
     end

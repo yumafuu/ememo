@@ -6,7 +6,7 @@ module Memo
         end
 
         def call
-          Usage::Help.new.call
+          puts Usage::Help.new.to_s
         end
       end
     end
