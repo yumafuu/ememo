@@ -3,21 +3,21 @@
 require_relative "lib/memo/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "memo"
+  spec.name          = "ememo"
   spec.version       = Memo::VERSION
   spec.authors       = ["Yuma Ishikawa"]
   spec.email         = ["yuma.fuu05@gmail.com"]
 
   spec.summary       = "memo easily"
   spec.description   = "memo easily on cli"
-  spec.homepage      = "https://github.com/YumaFuu/memo"
+  spec.homepage      = "https://github.com/YumaFuu/ememo"
   spec.required_ruby_version = Gem::Requirement.new(">= 3.0.0")
 
   spec.metadata["allowed_push_host"] = "https://github.com"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/YumaFuu/memo"
-  spec.metadata["changelog_uri"] = "https://github.com/YumaFuu/memo"
+  spec.metadata["source_code_uri"] = "https://github.com/YumaFuu/ememo"
+  spec.metadata["changelog_uri"] = "https://github.com/YumaFuu/ememo"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
