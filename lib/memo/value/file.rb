@@ -1,8 +1,8 @@
 module Memo
   class File
-    def initialize(file, namespace = nil)
+    def initialize(file = nil, namespace = nil)
       @config = Memo::Config.new
-      @file = file
+      @file = @config.default_filename
       @namespace = namespace || @config.default_namespace
     end
 
@@ -11,7 +11,7 @@ module Memo
     end
 
     def file
-      "#{@file}.md"
+      "#{@file}.#{@config.ext}"
     end
 
     def fullpath

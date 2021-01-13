@@ -8,20 +8,13 @@ module Memo
         end
 
         def call
-          file = @options[0] ||
-            @config.default_filename
+          filename = @options[0]
+          namespace = @options.namespace
 
-          namespace = @options.namespace ||
-            @config.default_namespace
+          file = Memo::File.new(file, namespace)
 
-          namespace = Memo::Namespace.new(
-            @options.namespace,
-          ).call
-
-          newfile = Memo::File.new(file, namespace)
-
-          system "mkdir -p #{newfile.dir}"
-          system "#{@config.editor} #{newfile.fullpath}"
+          system "mkdir -p #{file.dir}"
+          system "#{@config.editor} #{file.fullpath}"
         end
       end
     end

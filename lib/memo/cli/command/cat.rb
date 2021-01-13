@@ -6,11 +6,20 @@ module Memo
           @options = options
           @config = Memo::Config.new
           @today = Memo::Today.new
+          @defaultfile = Memo::Defaultfile.new
         end
 
         def call
-          file = @options[0] || @today.fullpath
-          system "#{@config.cat} #{file}"
+          path = case @options[0]
+                 when "today", "t"
+                   @today.fullpath
+                 when nil
+                   @defaultfile.fullpath
+                 else
+                   @options[0]
+                 end
+
+          system "#{@config.cat} #{path}"
         end
       end
     end

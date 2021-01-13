@@ -7,7 +7,7 @@ module Memo
 
           EASY EDIT MEMO
 
-          usage:
+          USAGE:
           - edit today's memo
             $ memo
 
@@ -22,7 +22,6 @@ module Memo
             $ memo cat my-memo -n project1
             $ memo cat my-memo
             $ memo cat
-            $ memo cat -ago 1
           TEXT
         end
       end

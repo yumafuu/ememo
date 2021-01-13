@@ -13,11 +13,13 @@ module Memo
               Command::Cat
             when "today", "t"
               Command::Today
-            when "config"
+            when "config", "co"
               Command::Config
+            when "help", "h"
+              Command::Help
             else
-              Command::Custom.new(@command).()
-              return
+              @options = @command
+              Command::Custom
             end
 
       cmd.new(@options).()

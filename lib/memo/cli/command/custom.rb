@@ -9,8 +9,14 @@ module Memo
 
         def call
           input = @config.
-            command[:"#{@command}"].
+            command[:"#{@command}"]&.
             split(" ")
+
+          if input.nil?
+            puts Error::Unknown.new.to_s
+            puts Usage::Help.new.to_s
+            return
+          end
 
           Memo::Cli.new(input).call
         end

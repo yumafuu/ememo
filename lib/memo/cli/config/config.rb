@@ -12,13 +12,18 @@ module Memo
         symbolize_keys: true,
       )
 
-      @config = conf[:config]
-      @alias = conf[:alias]
-      @command = conf[:command]
+      @config = conf[:config].to_h
+      @alias = conf[:namespace_alias].to_h
+      @alias = conf[:alias].to_h
+      @command = conf[:command].to_h
     end
 
     def root
-      @config[:root]
+      @config[:root] || "~/.memo"
+    end
+
+    def ext
+      @config[:ext] || "md"
     end
 
     def editor
