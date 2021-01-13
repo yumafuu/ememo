@@ -6,7 +6,7 @@ module Memo
           @options = options
           @config = Memo::Config.new
           @today = Memo::Today.new
-          @defaultfile = Memo::Defaultfile.new
+          @defaultfile = Memo::File.new
         end
 
         def call

@@ -3,6 +3,8 @@ module Memo
     def initialize(input)
       @command = input[0]
       @options = Option.new input[1..]
+      @command = input[0]
+      @options = Option.new input[1..]
     end
 
     def call
