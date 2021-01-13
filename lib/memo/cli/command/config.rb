@@ -7,7 +7,8 @@ module Memo
         end
 
         def call
-          tomlfile = ENV["MEMO_CONFIG"] || "~/.memo/config.toml"
+          tomlfile = ENV["MEMO_CONFIG"] || "#{@config.root}/config.toml"
+
           system "#{@config.editor} #{tomlfile}"
         end
       end

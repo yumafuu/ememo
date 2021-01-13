@@ -16,6 +16,8 @@ module Memo
       @alias = conf[:namespace_alias].to_h
       @alias = conf[:alias].to_h
       @command = conf[:command].to_h
+
+      system "mkdir -p #{root}"
     end
 
     def root
