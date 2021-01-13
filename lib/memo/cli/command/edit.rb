@@ -11,7 +11,7 @@ module Memo
           filename = @options[0]
           namespace = @options.namespace
 
-          file = Memo::File.new(file, namespace)
+          file = Memo::File.new(filename, namespace)
 
           system "mkdir -p #{file.dir}"
           system "#{@config.editor} #{file.fullpath}"

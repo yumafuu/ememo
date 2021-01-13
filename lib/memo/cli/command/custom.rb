@@ -9,7 +9,7 @@ module Memo
 
         def call
           input = @config.
-            command[:"#{@command}"]&.
+            alias[:"#{@command}"]&.
             split(" ")
 
           if input.nil?

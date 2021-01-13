@@ -2,7 +2,7 @@ module Memo
   class File
     def initialize(file = nil, namespace = nil)
       @config = Memo::Config.new
-      @file = @config.default_filename
+      @file = file || @config.default_filename
       @namespace = namespace || @config.default_namespace
     end
 

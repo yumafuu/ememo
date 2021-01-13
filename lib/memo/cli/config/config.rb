@@ -1,6 +1,6 @@
 module Memo
   class Config
-    attr_reader :alias, :command
+    attr_reader :alias, :alias
 
     def initialize
       tomlfile = ENV["MEMO_CONFIG"] || "~/.memo/config.toml"
@@ -15,7 +15,7 @@ module Memo
       @config = conf[:config].to_h
       @alias = conf[:namespace_alias].to_h
       @alias = conf[:alias].to_h
-      @command = conf[:command].to_h
+      @alias = conf[:alias].to_h
 
       system "mkdir -p #{root}"
     end
