@@ -3,16 +3,20 @@ module Memo
     attr_reader :namespace, :is_all
 
     def initialize(args)
-      @args = args.to_a
+      @raw_args = args.to_a
       @is_all = args.include?("-a") ||
         args.include?("-all")
 
       case args
       in [*, "-n", namespace, *]
         @namespace = namespace
-        @args.delete("-n")
-        @args.delete(namespace)
+        @raw_args.delete("-n")
+        @raw_args.delete(namespace)
       else
+      end
+
+      @args = @raw_args.select do |s|
+        !s.start_with? "-"
       end
     end
 
@@ -35,7 +39,7 @@ module Memo
     private
 
     def include_any?(*args)
-      args.map { |a| @args.include?(a) }.any?
+      args.map { |a| @raw_args.include?(a) }.any?
     end
   end
 end
