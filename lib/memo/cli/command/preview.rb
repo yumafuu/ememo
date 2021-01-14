@@ -15,6 +15,7 @@ module Memo
 
         def call
           filename = @options[0]
+
           path = case filename
                  when "today", "t"
                    @today.fullpath
@@ -25,7 +26,12 @@ module Memo
                    ).fullpath
                  end
 
-          @os.exec "#{@config.preview} #{@config.root}/#{path}"
+          cmd ="#{@config.preview} #{@config.root}/#{path}"
+          if @options.copy?
+            @os.exec "#{cmd} | (#{@config.pbcopy})"
+          end
+
+          @os.exec cmd
         end
       end
     end

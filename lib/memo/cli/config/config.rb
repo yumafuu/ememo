@@ -24,6 +24,7 @@ module Memo
 
     def ext = @config[:ext] || Default::Ext.to_s
     def root = @config[:root] || Default::Root.to_s
+    def pbcopy = @config[:pbcopy] || Default::Pbcopy.to_s
     def preview = @config[:preview] || Default::Preview.to_s
 
     def fuzzy_finder = @config[:fuzzy_finder] ||

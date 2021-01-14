@@ -8,6 +8,10 @@ module Memo
       def self.to_s = "cat"
     end
 
+    class Pbcopy
+      def self.to_s = "pbcopy"
+    end
+
     class Root
       def self.to_s = "~/.memo"
     end

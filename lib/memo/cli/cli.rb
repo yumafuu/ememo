@@ -17,6 +17,8 @@ module Memo
               Command::Preview
             when "today", "t"
               Command::Today
+            when "list", "l"
+              Command::List
             when "config", "c"
               Command::Config
             when "help", "h"
