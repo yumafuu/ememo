@@ -135,8 +135,8 @@ $ memo ptw
 ext = "md"
 root = "~/.memo"
 editor = "vim"
-# if linux
-pbcopy = "xsel --clipboard --input"
+# pbcopy = "pbcopy"
+# pbcopy = "xsel --clipboard --input"
 preview = "bat"
 fuzzy_finder = "fzf --preview 'bat --color=always {}'"
 default_filename = "memo"
