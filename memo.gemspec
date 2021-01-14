@@ -13,8 +13,6 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/YumaFuu/ememo"
   spec.required_ruby_version = Gem::Requirement.new(">= 3.0.0")
 
-  spec.metadata["allowed_push_host"] = "https://github.com"
-
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/YumaFuu/ememo"
   spec.metadata["changelog_uri"] = "https://github.com/YumaFuu/ememo"
