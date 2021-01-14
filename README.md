@@ -70,8 +70,28 @@ $ memo p todo -n project1
 # with namespace_alias
 $ memo p todo -n p
 
+# copy to clipboard
+$ memo p todo -n p -c
+$ memo p todo -n p -copy
 ```
 
+### List
+```bash
+# list of ~/.memo/mymemo/memo.md
+$ memo l
+$ memo list
+
+# list ~/.memo/project1/todo.md
+$ memo l -n project1
+
+# all
+$ memo l -a
+$ memo l -all
+
+# list of direcory
+$ memo l -d
+$ memo l -dir
+```
 ### Today
 ```bash
 # edit today's memo (~/.memo/2021/1/1.md)
@@ -115,6 +135,8 @@ $ memo ptw
 ext = "md"
 root = "~/.memo"
 editor = "vim"
+# if linux
+pbcopy = "xsel --clipboard --input"
 preview = "bat"
 fuzzy_finder = "fzf --preview 'bat --color=always {}'"
 default_filename = "memo"
@@ -123,6 +145,7 @@ default_namespace = "general"
 [namespace_alias]
 w = "work"
 p = "private"
+w1 = "work/project1"
 
 [command_alias]
 etw = "e todo -n w"
