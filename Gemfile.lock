@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ememo (0.1.1)
+    ememo (0.1.2)
       pry
       tomlrb
 
