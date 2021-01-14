@@ -21,11 +21,21 @@ module Memo
     end
 
     def dir?
-      @args.include? "-d"
+      include_any? "-dir", "-d"
+    end
+
+    def all?
+      include_any? "-all", "-a"
     end
 
     def copy?
-      @args.include? "-copy"
+      include_any? "-copy", "-c"
+    end
+
+    private
+
+    def include_any?(*args)
+      args.map { |a| @args.include?(a) }.any?
     end
   end
 end
