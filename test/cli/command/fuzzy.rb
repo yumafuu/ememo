@@ -4,7 +4,7 @@ class FuzzyCommandTest < Test::Unit::TestCase
   config = Memo::Config.new
 
   data(
-    "default" => {
+    "case1" => {
       args: "f",
       expect: "#{config.editor} $(find #{config.root} -type f "\
         "| #{config.fuzzy})",

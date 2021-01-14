@@ -2,19 +2,24 @@ require "test_helper"
 
 class PreviewCommandTest < Test::Unit::TestCase
   root = Memo::Default::Root.to_s
-  dir = Memo::Default::Namespace.to_s
-  file = Memo::Default::Filename.to_s
-  ext = Memo::Default::Ext.to_s
   today = Memo::Today.new
 
   data(
-    "default" => {
+    "case1" => {
       args: "p",
-      expect: "cat #{root}/#{dir}/#{file}.#{ext}",
+      expect: "cat #{root}/mymemo/memo.md",
     },
-    "today1" => {
+    "case2" => {
       args: "p t",
       expect: "cat #{root}/#{today.dir}/#{today.file}",
+    },
+    "case3" => {
+      args: "p -n hoge",
+      expect: "cat #{root}/hoge/memo.md",
+    },
+    "case4" => {
+      args: "p -n hoge fuga",
+      expect: "cat #{root}/hoge/fuga.md",
     },
   )
 

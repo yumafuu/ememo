@@ -5,7 +5,7 @@ class TodayCommandTest < Test::Unit::TestCase
   today = Memo::Today.new
 
   data(
-    "alias1" => {
+    "case1" => {
       args: "t",
       expect: "vim #{config.root}/#{today.dir}/#{today.file}",
     },

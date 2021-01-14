@@ -4,12 +4,10 @@ class CustomCommandTest < Test::Unit::TestCase
   config = Memo::Config.new
 
   data(
-    "alias1" => {
+    "case1" => {
       args: "alias1",
-      expect: "edit -n t test",
       expect: "vim #{config.root}/test/test.#{config.ext}",
     },
-
   )
 
   test "success" do |input|
