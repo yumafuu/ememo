@@ -7,7 +7,7 @@ class TodayCommandTest < Test::Unit::TestCase
   data(
     "alias1" => {
       args: "t",
-      expect: "vim #{config.root}/#{today.dir}/#{today.file}.#{config.ext}",
+      expect: "vim #{config.root}/#{today.dir}/#{today.file}",
     },
 
   )

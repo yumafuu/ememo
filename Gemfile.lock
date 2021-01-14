@@ -1,13 +1,18 @@
 PATH
   remote: .
   specs:
-    ememo (0.1.3)
+    ememo (0.1.4)
       tomlrb
 
 GEM
   remote: https://rubygems.org/
   specs:
+    coderay (1.1.3)
+    method_source (1.0.0)
     power_assert (1.2.0)
+    pry (0.13.1)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
     rake (13.0.3)
     test-unit (3.3.7)
       power_assert
@@ -18,6 +23,7 @@ PLATFORMS
 
 DEPENDENCIES
   ememo!
+  pry
   rake (~> 13.0)
   test-unit (~> 3.0)
 

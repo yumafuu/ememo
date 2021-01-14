@@ -4,6 +4,7 @@ $LOAD_PATH.unshift File.expand_path("../lib", __dir__)
 require "memo"
 
 require "test-unit"
+require "pry"
 require_relative "./mock/os"
 
 toml = "./config.test.toml"
