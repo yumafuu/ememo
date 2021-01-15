@@ -6,7 +6,7 @@ class ConfigCommandTest < Test::Unit::TestCase
   file = Memo::Default::Configfile.to_s
 
   data(
-    "default" => {
+    "case1" => {
       args: "config",
       expect: "vim #{ENV["MEMO_CONFIG"]}",
     },
