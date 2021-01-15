@@ -5,7 +5,7 @@ module Memo
         def initialize(*); end
 
         def call
-          puts Usage::Help.new.to_s
+          puts Memo::Usage.new.to_s
         end
       end
     end

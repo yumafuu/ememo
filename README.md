@@ -129,6 +129,12 @@ $ memo ptw
 # => `memo preview todo -n work`
 ```
 
+### Comfirm Alias
+```bash
+$ memo a
+$ memo alias
+```
+
 ## Sample Config
 ```toml
 [config]
@@ -136,7 +142,7 @@ ext = "md"
 root = "~/.memo"
 editor = "vim"
 # pbcopy = "pbcopy"
-# pbcopy = "xsel --clipboard --input"
+pbcopy = "xsel --clipboard --input"
 preview = "bat"
 fuzzy_finder = "fzf --preview 'bat --color=always {}'"
 default_filename = "memo"
