@@ -17,7 +17,7 @@ module Memo
 
           if input.nil?
             puts Error::Unknown.new.to_s
-            puts Usage::Help.new.to_s
+            puts Memo::Usage.new.to_s
             return
           end
 

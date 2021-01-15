@@ -25,8 +25,6 @@ module Memo
               Command::Help
             when "setup", "s"
               Command::Setup
-            when "alias", "a"
-              Command::Alias
             when "fuzzy", "f"
               Command::Fuzzy
             else

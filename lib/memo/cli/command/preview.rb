@@ -18,15 +18,19 @@ module Memo
 
           path = case filename
                  when "today", "t"
-                   @today.fullpath
+                   "#{@config.root}/#{@today.fullpath}"
+                 when "config", "c"
+                   @config.path
                  else
-                   Memo::File.new(
+                   p = Memo::File.new(
                      filename,
                      @options.namespace,
                    ).fullpath
+
+                   "#{@config.root}/#{p}"
                  end
 
-          cmd ="#{@config.preview} #{@config.root}/#{path}"
+          cmd ="#{@config.preview} #{path}"
           if @options.copy?
             @os.exec "#{cmd} | (#{@config.pbcopy})"
           end

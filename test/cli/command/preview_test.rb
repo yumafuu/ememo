@@ -21,6 +21,10 @@ class PreviewCommandTest < Test::Unit::TestCase
       args: "p -n hoge fuga",
       expect: "cat #{root}/hoge/fuga.md",
     },
+    "case5" => {
+      args: "p c",
+      expect: "cat #{ENV["MEMO_CONFIG"]}",
+    },
   )
 
   test "success" do |input|

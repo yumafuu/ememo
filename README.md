@@ -73,6 +73,10 @@ $ memo p todo -n p
 # copy to clipboard
 $ memo p todo -n p -c
 $ memo p todo -n p -copy
+
+# preview config
+$ memo p c
+$ memo p config
 ```
 
 ### List
@@ -127,12 +131,6 @@ $ memo etw
 
 $ memo ptw
 # => `memo preview todo -n work`
-```
-
-### Comfirm Alias
-```bash
-$ memo a
-$ memo alias
 ```
 
 ## Sample Config
