@@ -1,6 +1,6 @@
 module Memo
   class Option
-    attr_reader :namespace, :is_all
+    attr_reader :namespace
 
     def initialize(args)
       @raw_args = args.to_a

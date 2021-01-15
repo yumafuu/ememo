@@ -13,7 +13,7 @@ module Memo
 
         def call
           namespace = @options.namespace
-          is_all = @options.is_all
+          is_all = @options.all?
           type = @options.dir? ? "d" : "f"
 
           dir = if is_all
