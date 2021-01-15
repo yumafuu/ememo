@@ -4,10 +4,8 @@ module Memo
 
     def initialize(args)
       @raw_args = args.to_a
-      @is_all = args.include?("-a") ||
-        args.include?("-all")
 
-      case args
+      case @raw_args
       in [*, "-n", namespace, *]
         @namespace = namespace
         @raw_args.delete("-n")
