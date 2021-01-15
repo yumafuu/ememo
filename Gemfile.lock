@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ememo (0.1.6)
+    ememo (0.1.7)
       tomlrb
 
 GEM
