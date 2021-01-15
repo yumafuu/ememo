@@ -77,11 +77,11 @@ $ memo p todo -n p -copy
 
 ### List
 ```bash
-# list of ~/.memo/mymemo/memo.md
+# list of ~/.memo/mymemo
 $ memo l
 $ memo list
 
-# list ~/.memo/project1/todo.md
+# list ~/.memo/project1
 $ memo l -n project1
 
 # all
