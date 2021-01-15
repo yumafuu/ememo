@@ -7,7 +7,7 @@ module Memo
     end
 
     def dir = "#{@year}/#{@month}"
-      def file = "#{@day}.#{@config.ext}"
+    def file = "#{@day}.#{@config.ext}"
     def fullpath = "#{dir}/#{file}"
   end
 end

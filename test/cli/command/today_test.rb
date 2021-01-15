@@ -9,7 +9,6 @@ class TodayCommandTest < Test::Unit::TestCase
       args: "t",
       expect: "vim #{config.root}/#{today.dir}/#{today.file}",
     },
-
   )
 
   test "success" do |input|

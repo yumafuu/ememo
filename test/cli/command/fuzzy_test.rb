@@ -7,7 +7,7 @@ class FuzzyCommandTest < Test::Unit::TestCase
     "case1" => {
       args: "f",
       expect: "#{config.editor} $(find #{config.root} -type f "\
-        "| #{config.fuzzy})",
+        "| #{config.fuzzy_finder})",
     },
 
   )
