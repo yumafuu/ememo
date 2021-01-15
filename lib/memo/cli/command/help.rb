@@ -2,10 +2,15 @@ module Memo
   class Cli
     module Command
       class Help
-        def initialize(*); end
+        def initialize(
+          _,
+          os: Memo::OS.new
+        )
+          @os = os
+        end
 
         def call
-          puts Memo::Usage.new.to_s
+          @os.echo Memo::Usage.new.to_s
         end
       end
     end

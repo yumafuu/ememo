@@ -4,7 +4,7 @@ class HelpCommandTest < Test::Unit::TestCase
   data(
     "case1" => {
       args: "h",
-      expect: nil,
+      expect: Memo::Usage.new.to_s,
     },
   )
 
