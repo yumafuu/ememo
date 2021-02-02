@@ -32,7 +32,7 @@ module Memo
             puts "WARNING: config file already exists"
             puts
             print "reset config? (y/n) "
-            ans = STDIN.gets.chomp
+            ans = STDIN.gets.to_s.chomp
             if ans != "y"
               puts "aborted"
               return

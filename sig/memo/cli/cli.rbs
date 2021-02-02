@@ -1,0 +1,11 @@
+# Classes
+module Memo
+  class Cli
+    @command: untyped
+    @options: untyped
+    @os: untyped
+
+    def initialize: (untyped input, ?os: untyped) -> untyped
+    def call: -> untyped
+  end
+end
