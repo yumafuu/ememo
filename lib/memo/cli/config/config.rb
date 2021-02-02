@@ -22,21 +22,21 @@ module Memo
       system "mkdir -p #{root}"
     end
 
-    def ext = @config[:ext] || Default::Ext.to_s
-    def root = @config[:root] || Default::Root.to_s
-    def pbcopy = @config[:pbcopy] || Default::Pbcopy.to_s
-    def preview = @config[:preview] || Default::Preview.to_s
+    def ext = @config[:ext] || Default::Ext.new
+    def root = @config[:root] || Default::Root.new
+    def pbcopy = @config[:pbcopy] || Default::Pbcopy.new
+    def preview = @config[:preview] || Default::Preview.new
 
     def fuzzy_finder = @config[:fuzzy_finder] ||
-      Default::FuzzyFinder.to_s
+      Default::FuzzyFinder.new
 
     def editor = @config[:editor] ||
-      ENV["EDITOR"] || Default::Editor.to_s
+      ENV["EDITOR"] || Default::Editor.new
 
     def default_filename = \
-      @config[:default_filename] || Default::Filename.to_s
+      @config[:default_filename] || Default::Filename.new
 
     def default_namespace = \
-      @config[:default_namespace] || Default::Namespace.to_s
+      @config[:default_namespace] || Default::Namespace.new
   end
 end

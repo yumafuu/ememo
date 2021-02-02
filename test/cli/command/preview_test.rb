@@ -1,7 +1,7 @@
 require "test_helper"
 
 class PreviewCommandTest < Test::Unit::TestCase
-  root = Memo::Default::Root.to_s
+  root = Memo::Default::Root.new
   today = Memo::Today.new
 
   data(

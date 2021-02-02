@@ -1,9 +1,9 @@
 require "test_helper"
 
 class ConfigCommandTest < Test::Unit::TestCase
-  root = Memo::Default::Root.to_s
-  editor = Memo::Default::Editor.to_s
-  file = Memo::Default::Configfile.to_s
+  root = Memo::Default::Root.new
+  editor = Memo::Default::Editor.new
+  file = Memo::Default::Configfile.new
 
   data(
     "case1" => {

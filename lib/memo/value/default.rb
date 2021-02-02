@@ -1,39 +1,39 @@
 module Memo
   module Default
-    class Ext
-      def self.to_s = "md"
+    class Ext < String
+      def initialize = super("md")
     end
 
-    class Preview
-      def self.to_s = "cat"
+    class Preview < String
+      def initialize = super("cat")
     end
 
-    class Pbcopy
-      def self.to_s = "pbcopy"
+    class Pbcopy < String
+      def initialize = super("pbcopy")
     end
 
-    class Root
-      def self.to_s = "~/.memo"
+    class Root < String
+      def initialize = super("~/.memo")
     end
 
-    class Editor
-      def self.to_s = "vim"
+    class Editor < String
+      def initialize = super("vim")
     end
 
-    class FuzzyFinder
-      def self.to_s = "fzf"
+    class FuzzyFinder < String
+      def initialize = super("fzf")
     end
 
-    class Filename
-      def self.to_s = "memo"
+    class Filename < String
+      def initialize = super("memo")
     end
 
-    class Namespace
-      def self.to_s = "mymemo"
+    class Namespace < String
+      def initialize = super("mymemo")
     end
 
-    class Configfile
-      def self.to_s = "config.toml"
+    class Configfile < String
+      def initialize = super("config.toml")
     end
   end
 end

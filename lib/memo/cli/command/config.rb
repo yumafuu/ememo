@@ -8,7 +8,7 @@ module Memo
         )
           @os = os
           @config = Memo::Config.new
-          @file = Default::Configfile.to_s
+          @file = Default::Configfile.new
         end
 
         def call
