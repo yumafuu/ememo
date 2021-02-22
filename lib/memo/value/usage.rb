@@ -1,7 +1,7 @@
 module Memo
-  class Usage
-    def to_s
-      <<~TEXT
+  class Usage < String
+    def initialize
+      super <<~TEXT
         EASY EDIT MEMO
 
         USAGE

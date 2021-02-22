@@ -16,12 +16,12 @@ module Memo
           ).()&.split(" ")
 
           if input.nil?
-            puts Error::Unknown.new.to_s
-            puts Memo::Usage.new.to_s
+            puts Error::Unknown.new
+            puts Memo::Usage.new
             return
           end
 
-          Memo::Cli.new(input, os: @os).call
+          Memo::Cli.new(input, os: @os).()
         end
       end
     end

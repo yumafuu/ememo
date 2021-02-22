@@ -10,7 +10,7 @@ module Memo
         end
 
         def call
-          @os.echo Memo::Usage.new.to_s
+          @os.echo Memo::Usage.new
         end
       end
     end
