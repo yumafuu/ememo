@@ -11,23 +11,6 @@ module Memo
         end
 
         def call
-          toml = <<~TOML
-            [config]
-            # ext = "md"
-            # root = "~/.memo"
-            # editor = "vim"
-            # preview = "bat"
-            # fuzzy_finder = "fzf --preview 'bat --color=always {}'"
-            # default_filename = "memo"
-            # default_namespace = "mymemo"
-
-            [namespace_alias]
-            # p1 = "project1"
-
-            [command_alias]
-            # ep1 = "edit memo -n project1"
-          TOML
-
           if ::File.exist? @config.path
             puts "WARNING: config file already exists"
             puts
@@ -39,6 +22,7 @@ module Memo
             end
           end
 
+          toml = SampleToml.new
           @os.write @config.path, toml
 
           puts

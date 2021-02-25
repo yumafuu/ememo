@@ -37,7 +37,7 @@ module Memo
     private
 
     def include_any?(*args)
-      args.map { |a| @raw_args.include?(a) }.any?
+      !(@row_args & args).empty?
     end
   end
 end
